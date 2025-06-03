@@ -1,0 +1,143 @@
+/* styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0; padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.widget {
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.widget:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.9);
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #4caf50;
+  user-select: none;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #a5d6a7;
+}
+
+input[type="number"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2b2b2b;
+  color: #e0e0e0;
+  font-size: 1rem;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+input[type="datetime-local"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+button {
+  background: #4caf50;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #43a047;
+}
+
+.progress-bar {
+  background: #333;
+  border-radius: 12px;
+  height: 18px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.progress-bar-inner {
+  background: #4caf50;
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease;
+  border-radius: 12px 0 0 12px;
+}
+
+/* Water drops */
+.water-drop {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #555;
+  cursor: pointer;
+  box-shadow: inset 0 0 5px #333;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.water-drop.active {
+  background: #4caf50;
+  box-shadow: 0 0 8px #4caf50;
+}
+
+/* Checklist (schedule) */
+.checklist label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  color: #a5d6a7;
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 10px;
+  }
+  .widget {
+    padding: 15px 20px;
+  }
+  button {
+    width: 100%;
+  }
+}
